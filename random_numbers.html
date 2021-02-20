@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script>
+        function getRandom() {
+            d1 = parseInt(document.querySelector('#d1').value);
+            d2 = parseInt(document.querySelector('#d2').value);
+            random_result = Math.floor(Math.random() * (d2 - d1 + 1)) + d1;
+            document.querySelector('#finalResult').innerHTML = random_result;
+        };
+    </script>
+</head>
+<body>
+    <h1>Random Numbers</h1><br>
+
+    <form>
+        <div class="mb-2 p-5">
+          <label for="d1" class="form-label">From</label>
+          <input type="text" class="form-control" id="d1">
+        </div>
+        <div class="mb-2 p-5">
+          <label for="d2" class="form-label">To</label>
+          <input type="text" class="form-control" id="d2">
+        </div>
+
+        <button onclick="getRandom()" class="btn btn-primary m-5" type="button">Generate Random Number</button>
+      </form>
+
+
+    <h2 class="mb-2 p-5" id="finalResult"></h2>
+
+</body>
+</html>
