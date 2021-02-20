@@ -13,11 +13,14 @@
             random_result = Math.floor(Math.random() * (d2 - d1 + 1)) + d1;
             document.querySelector('#finalResult').innerHTML = random_result;
         };
+        document.addEventListener('DOMContentLoaded', function() {
+
+          document.querySelector('button').onclick = getRandom;
+        });
     </script>
 </head>
 <body>
     <h1>Random Numbers</h1><br>
-
     <form>
         <div class="mb-2 p-5">
           <label for="d1" class="form-label">From</label>
@@ -28,11 +31,9 @@
           <input type="text" class="form-control" id="d2">
         </div>
 
-        <button onclick="getRandom()" class="btn btn-primary m-5" type="button">Generate Random Number</button>
+        <button class="btn btn-primary m-5" type="button">Generate Random Number</button>
       </form>
 
-
     <h2 class="mb-2 p-5" id="finalResult"></h2>
-
 </body>
 </html>
