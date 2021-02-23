@@ -20,20 +20,19 @@
     </script>
 </head>
 <body>
-    <h1 class="mb-2 p-5">Random Numbers</h1><br>
-    <form>
-        <div class="mb-2 p-5">
-          <label for="d1" class="form-label">From</label>
-          <input type="text" class="form-control" id="d1">
-        </div>
-        <div class="mb-2 p-5">
-          <label for="d2" class="form-label">To</label>
-          <input type="text" class="form-control" id="d2">
-        </div>
-
-        <button class="btn btn-primary m-5" type="button">Generate Random Number</button>
-      </form>
-
-    <h2 class="mb-2 p-5" id="finalResult"></h2>
+  <h1 class="text-center mt-5">Random Numbers</h1>
+  <div class="container text-justify">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col text-center">
+            <form>
+      <input id="d1" class="form-control mt-3" type="number" placeholder="From" required="">
+      <input id="d2" class="form-control mt-3" type="number" placeholder="To" required="">
+      <button class="btn btn-primary mt-3" type="button">Random</button>
+    </form>
+    <h1 id="finalResult" type="text" class="mt-3"></div>
+        <div class="col-3"></div>
+    </div>
+</div>
 </body>
 </html>
