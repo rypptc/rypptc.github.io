@@ -15,10 +15,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const nouns = ["nico", "tasche", "hallo", "emma", "okay", "lisa", "tante", "yara", "pizza", "zimmer", "super", "problem", "adresse", "deutschland", "spanien", "nawin", "tag", "süden", "weg", "salami", "entschuldigung", "tschüss", "nina", "stift", "hi", "moment", "sevilla", "pass", "geburtstag", "fahrrad_lade", "euro", "berlin", "team", "morgen", "frau", "hotel", "könig_hof", "wiedersehen", "taxi", "name", "brunner", "fünf", "jahr", "party", "schinken", "frankreich", "tafel", "herr", "hey", "zentrum", "mama", "max", "vater", "ost", "foto", "zwölf", "lotte", "sebastian", "wow", "hawaii", "köln", "selma", "brille", "buch", "unterricht", "haus", "jugend_herberge", "gemüse", "stopp", "hilfe", "hausnummer", "flughafen", "s", "papa", "ciao", "lampe", "stadt", "bier", "milch", "freund", "speisekarte", "thunfisch", "syrien", "damaskus", "sprache", "deutsch", "wohnung", "zettel", "nawins", "auto", "küche", "bad", "los", "quadratmeter", "mittagessen", "müller", "schneider", "geht's", "reise", "ey", "ahnung", "telefon", "familie", "polizei", "idee", "fahrrad_geschäft", "einladung", "geschenk", "spass", "alt.", "fund_büro", "mann", "finder", "hmm", "schreiner_strasse", "gonzález", "wagnergasse", "passnummer", "handy", "yaras", "trinken", "cola", "limonade", "nehm", "kaffee", "zucker", "von", "book", "hunger", "salat", "radio", "leute", "tomate", "bitte", "ananas", "abscheiden_party", "sehenswürdigkeit", "hamburg", "heidelberg", "brandenburger", "tor", "spiel", "west", "norden", "schwede", "flüchtling", "deutsch_kurs", "englisch", "sprachschule", "lehrerin", "august_strauss_berg_gas", "nomen", "artikel", "stuhl", "bewerber", "mieter", "tür", "wg", "wohnzimmer", "wolf", "ecke", "teppich", "uni", "zahn", "abendessen", "kamp", "lena", "opa", "sarah", "tom", "adalbert-stifter-straße", "mist", "unterlage", "meeting", "restaurant", "martina", "herbert", "tillmanns", "scholl", "help", "do", "you", "need", "gone", "the", "strasse", "andel", "adel_schiff_strasse", "yippie", "amerika", "n", "sag", "spain", "barcelona", "madrid", "nummer", "polizist", "police", "polizeirevier", "sorge", "papier", "ausweis", "passport", "has", "a", "bicycle", "shop", "geschäft", "helps", "erfolg", "zahl", "charlotte", "happy", "birthday", "glückwunsch", "schlaf_sack", "isomatte", "traum_frau", "fall", "amor", "leben", "ruf", "telefonnummer", "werbung", "handy_nummer", "gott", "aufnäher", "fahrrad", "polizei_stelle", "scheinerstrasse", "r", "s-c-h-r-e-i-n-e-r", "glück", "jürgen", "geburtsdatum", "my", "know", "here", "waiting", "for", "dankeschön", "mutter", "flugzeug", "getränk", "apfel_saft", "wasser", "wein", "tee", "angebot", "durst", "posten", "frage", "hungry", "sushi", "liebling_italiener", "mozzarella", "vegetarierin", "mal", "nachricht", "bestellung", "karte", "rechnung", "trinkgeld", "bye-bye-party", "appetit", "dank", "kölner", "dom", "österreich", "schweiz", "düsseldorf", "woche", "münchen", "wart", "kommentar", "europa", "tada", "spezialität", "land", "fähnchen", "köttbullar", "nee", "norwegen", "käse", "japan", "italien", "gazpacho", "job", "marc", "sascha", "russland", "refugee", "aufenthaltserlaubni", "spanisch", "thailand", "thai", "antwort", "hol", "schlüssel", "rana", "jenny", "wörterbuch", "anzeige", "internet", "terrasse", "aufzug", "garage", "graupner", "heizung", "urlaub", "hostel", "hostels", "bekannte", "marvin", "fenster", "miete", "nebenkosten", "monat", "interessent", "mädel", "wolfgang", "nice", "tisch", "schrank", "sofa", "wand", "schlagzeug", "drums", "kissen", "chillen", "ulla", "nachbar", "katastrophe", "kollegin", "kurs", "volleyball_training", "training", "termin", "arzt", "schule", "lösung", "babysitting", "frühstück", "müsli", "apfel", "brokkoli", "uhr", "hausaufgabe", "chaos"]
+            const terms = ["nico", "tasche", "hallo", "emma", "okay", "lisa", "tante", "yara", "pizza", "zimmer", "super", "problem", "adresse", "deutschland", "spanien", "nawin", "tag", "süden", "weg", "salami", "entschuldigung", "tschüss", "nina", "stift", "hi", "moment", "sevilla", "pass", "geburtstag", "fahrrad_lade", "euro", "berlin", "team", "morgen", "frau", "hotel", "könig_hof", "wiedersehen", "taxi", "name", "brunner", "fünf", "jahr", "party", "schinken", "frankreich", "tafel", "herr", "hey", "zentrum", "mama", "max", "vater", "ost", "foto", "zwölf", "lotte", "sebastian", "wow", "hawaii", "köln", "selma", "brille", "buch", "unterricht", "haus", "jugend_herberge", "gemüse", "stopp", "hilfe", "hausnummer", "flughafen", "s", "papa", "ciao", "lampe", "stadt", "bier", "milch", "freund", "speisekarte", "thunfisch", "syrien", "damaskus", "sprache", "deutsch", "wohnung", "zettel", "nawins", "auto", "küche", "bad", "los", "quadratmeter", "mittagessen", "müller", "schneider", "geht's", "reise", "ey", "ahnung", "telefon", "familie", "polizei", "idee", "fahrrad_geschäft", "einladung", "geschenk", "spass", "alt.", "fund_büro", "mann", "finder", "hmm", "schreiner_strasse", "gonzález", "wagnergasse", "passnummer", "handy", "yaras", "trinken", "cola", "limonade", "nehm", "kaffee", "zucker", "von", "book", "hunger", "salat", "radio", "leute", "tomate", "bitte", "ananas", "abscheiden_party", "sehenswürdigkeit", "hamburg", "heidelberg", "brandenburger", "tor", "spiel", "west", "norden", "schwede", "flüchtling", "deutsch_kurs", "englisch", "sprachschule", "lehrerin", "august_strauss_berg_gas", "nomen", "artikel", "stuhl", "bewerber", "mieter", "tür", "wg", "wohnzimmer", "wolf", "ecke", "teppich", "uni", "zahn", "abendessen", "kamp", "lena", "opa", "sarah", "tom", "adalbert-stifter-straße", "mist", "unterlage", "meeting", "restaurant", "martina", "herbert", "tillmanns", "scholl", "help", "do", "you", "need", "gone", "the", "strasse", "andel", "adel_schiff_strasse", "yippie", "amerika", "n", "sag", "spain", "barcelona", "madrid", "nummer", "polizist", "police", "polizeirevier", "sorge", "papier", "ausweis", "passport", "has", "a", "bicycle", "shop", "geschäft", "helps", "erfolg", "zahl", "charlotte", "happy", "birthday", "glückwunsch", "schlaf_sack", "isomatte", "traum_frau", "fall", "amor", "leben", "ruf", "telefonnummer", "werbung", "handy_nummer", "gott", "aufnäher", "fahrrad", "polizei_stelle", "scheinerstrasse", "r", "s-c-h-r-e-i-n-e-r", "glück", "jürgen", "geburtsdatum", "my", "know", "here", "waiting", "for", "dankeschön", "mutter", "flugzeug", "getränk", "apfel_saft", "wasser", "wein", "tee", "angebot", "durst", "posten", "frage", "hungry", "sushi", "liebling_italiener", "mozzarella", "vegetarierin", "mal", "nachricht", "bestellung", "karte", "rechnung", "trinkgeld", "bye-bye-party", "appetit", "dank", "kölner", "dom", "österreich", "schweiz", "düsseldorf", "woche", "münchen", "wart", "kommentar", "europa", "tada", "spezialität", "land", "fähnchen", "köttbullar", "nee", "norwegen", "käse", "japan", "italien", "gazpacho", "job", "marc", "sascha", "russland", "refugee", "aufenthaltserlaubni", "spanisch", "thailand", "thai", "antwort", "hol", "schlüssel", "rana", "jenny", "wörterbuch", "anzeige", "internet", "terrasse", "aufzug", "garage", "graupner", "heizung", "urlaub", "hostel", "hostels", "bekannte", "marvin", "fenster", "miete", "nebenkosten", "monat", "interessent", "mädel", "wolfgang", "nice", "tisch", "schrank", "sofa", "wand", "schlagzeug", "drums", "kissen", "chillen", "ulla", "nachbar", "katastrophe", "kollegin", "kurs", "volleyball_training", "training", "termin", "arzt", "schule", "lösung", "babysitting", "frühstück", "müsli", "apfel", "brokkoli", "uhr", "hausaufgabe", "chaos"]
             const freq = [51, 42, 33, 32, 20, 19, 18, 16, 16, 16, 14, 13, 13, 13, 12, 11, 10, 9, 8, 8, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
             
-            for (let i = 0; i < nouns.length; i++) {
+            for (let i = 0; i < terms.length; i++) {
 
                 // Create a table row
                 const tabBody = document.querySelector('#tableBody');
@@ -29,20 +29,16 @@
                 const tabData1 = document.createElement('td');
                 tabData1.classList.add('text-center');
                 tabRow.appendChild(tabData1);
-                const nounText = document.createTextNode(nouns[i]);
-                tabData1.appendChild(nounText);
+                const termText = document.createTextNode(terms[i]);
+                tabData1.appendChild(termText);
 
                 //Create a table data
                 const tabData2 = document.createElement('td');
                 tabData2.classList.add('text-center');
                 tabRow.appendChild(tabData2);
-                const nounFreq = document.createTextNode (freq[i]);
-                tabData2.appendChild(nounFreq);
+                const termFreq = document.createTextNode (freq[i]);
+                tabData2.appendChild(termFreq);
             }
-
-
-
-    // Some code here
 });
 
     </script>
@@ -55,7 +51,7 @@
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="mockup.html">MOCKUP</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="select_m.html">MOCKUP</a></li>
                 </ul>
         </div>
         </div>
@@ -85,7 +81,7 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col text-center"><a class="btn btn-primary" role="button" href="mockup-5.html">Back to results</a></div>
+                    <div class="col text-center"><a class="btn btn-primary" role="button" href="overview2.html">Back to results</a></div>
                 </div>
             </div>
         </section>
