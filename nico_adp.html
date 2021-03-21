@@ -13,6 +13,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const terms = [
+            "in", "aus", "mit", "zu", "von", "für", "nach", "auf", "bis", "an", "bei", "ohne", "plus", "um", "gegen"
+            ];
+            const freq = [
+            67, 22, 21, 15, 13, 8, 8, 7, 7, 5, 5, 4, 1, 1, 1
+            ];
+            
+            for (let i = 0; i < terms.length; i++) {
+
+                // Create a table row
+                const tabBody = document.querySelector('#tableBody');
+                const tabRow = document.createElement('tr');
+                tabBody.appendChild(tabRow);
+
+                //Create a table data
+                const tabData1 = document.createElement('td');
+                tabData1.classList.add('text-center');
+                tabRow.appendChild(tabData1);
+                const termText = document.createTextNode(terms[i]);
+                tabData1.appendChild(termText);
+
+                //Create a table data
+                const tabData2 = document.createElement('td');
+                tabData2.classList.add('text-center');
+                tabRow.appendChild(tabData2);
+                const termFreq = document.createTextNode (freq[i]);
+                tabData2.appendChild(termFreq);
+            }
+});
+    </script>
 </head>
 
 <body>
@@ -53,7 +85,7 @@
                     </nav>
                 </div>
                 <div>
-                    <h4 class="text-center">Terms</h4>
+                    <h4 class="text-center">Adpositions</h4>
                 </div>
                 <div class="row">
                     <div class="col-2"></div>
@@ -62,48 +94,11 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Function</th>
-                                        <th class="text-center">Number of Lemmas</th>
+                                        <th class="text-center">Lemma</th>
+                                        <th class="text-center">Frequency</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">Noun</td>
-                                        <td class="text-center">1015</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Verb</td>
-                                        <td class="text-center">615</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Pronoun</td>
-                                        <td class="text-center">553</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Adverb</td>
-                                        <td class="text-center">486</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Determiner</td>
-                                        <td class="text-center">371</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Adjective</td>
-                                        <td class="text-center">203</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Adposition</td>
-                                        <td class="text-center">185</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Conjunction</td>
-                                        <td class="text-center">168</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">Interjection</td>
-                                        <td class="text-center">52</td>
-                                    </tr>
-                                </tbody>
+                                <tbody id="tableBody"></tbody>
                             </table>
                         </div>
                     </div>
