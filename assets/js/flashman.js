@@ -1,7 +1,22 @@
-let myFlashcards = [
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(myFlashcards)
+    randomNum = Math.floor(Math.random() * (myFlashcards.length))
+
+
+    document.querySelector('#vidFrame').setAttribute('src', `${myFlashcards[randomNum].video}`);
+    for (i=0; i < myFlashcards[randomNum].deDialog.length; i++) {
+        const elem = document.createElement('p');
+        const div1 = document.querySelector('#dial1');
+        const elemText = document.createTextNode(myFlashcards[randomNum].deDialog[i]); 
+        elem.appendChild(elemText);
+        div1.appendChild(elem);
+    }
+})
+
+const myFlashcards = [
     {
         fcId: 1,
-        video: "static\nico01.mp4",
+        video: "static\\nico01.mp4",
         deDialog: [
             "Hi.", 
             "Hi.", 
@@ -19,7 +34,7 @@ let myFlashcards = [
     },
     {
         fcId: 2,
-        video: "static\nico02.mp4",
+        video: "static\\nico02.mp4",
         deDialog: [
             "Was machst du hier?",
             "Ich habe ein Problem:",
@@ -35,7 +50,7 @@ let myFlashcards = [
     },
     {
         fcId: 3,
-        video: "static\nico03.mp4",
+        video: "static\\nico03.mp4",
         deDialog: [
             "Okay, das ist nicht so gut. Und woher kommst du?",
             "Ich komme aus Spanien. Ich wohne in Sevilla."
@@ -47,7 +62,7 @@ let myFlashcards = [
     },
     {
         fcId: 4,
-        video: "static\nico04.mp4",
+        video: "static\\nico04.mp4",
         deDialog: [
             "Schön. Und wer ist Yara?",
             "Yara ist Nicos Tante. Er hat gesagt, sie hat hier",
@@ -61,7 +76,7 @@ let myFlashcards = [
     },
     {
         fcId: 5,
-        video: "static\nico05.mp4",
+        video: "static\\nico05.mp4",
         deDialog: [
             "Auch nicht so gut. Und wie alt bist du?",
             "Ich bin 22 Jahre alt. Und du? Kommst du aus Deutschland?",
@@ -79,7 +94,7 @@ let myFlashcards = [
     },
     {
         fcId: 6,
-        video: "static\nico06.mp4",
+        video: "static\\nico06.mp4",
         deDialog: [
             "Kann Nico zwei Tage hier wohnen?",
             "Klar. Kein Problem!",
@@ -95,7 +110,7 @@ let myFlashcards = [
     },
     {
         fcId: 7,
-        video: "static\nico07.mp4",
+        video: "static\\nico07.mp4",
         deDialog: [
             "Und es gibt eine Party?",
             "Ja, aber wir haben ein kleines Problem.",
@@ -111,7 +126,7 @@ let myFlashcards = [
     },
     {
         fcId: 8,
-        video: "static\nico08.mp4",
+        video: "static\\nico08.mp4",
         deDialog: [
             "Klar. Hat am Flughafen alles geklappt? Geht es Emma gut?",
             "Ja. Emmas Mutter sitzt im Flugzeug und Emma geht es gut, die ist bei Lotte."
@@ -123,7 +138,7 @@ let myFlashcards = [
     },
     {
         fcId: 9,
-        video: "static\nico09.mp4",
+        video: "static\\nico09.mp4",
         deDialog: [
             "Ey, wow! Die Lampe funktioniert wieder.",
             "Super, Nico! Danke! Möchtest du etwas trinken?",
@@ -141,10 +156,4 @@ let myFlashcards = [
             "Or three."
         ]
     }
-]
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-
-}
+];
