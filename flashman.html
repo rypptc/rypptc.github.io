@@ -64,24 +64,18 @@
                 <video id="vidFrame" src="" width="300" height="300" controls=""></video>
               </div>
               <div class="col-6 text-center">
-                <div id="dial1"></div>
-                <button class="btn text-center btn-outline-primary" type="button">
-                  Answer
-                </button>
+                <div id="frontSide">
+                  <div id="dial1"></div>
+                  <button id="answerBtn" class="btn text-center btn-outline-primary mt-3" type="button">Answer</button>
+                </div>
                 <hr>
-                <div id="dial2"></div>
-                <button
-                class="btn text-center btn-outline-primary mx-2"
-                type="button">Repeat</button
-              ><button
-                class="btn text-center btn-outline-primary mx-2"
-                type="button"
-              >
-                Save
-              </button>
-
-                <hr />
-                <textarea></textarea>
+                <div id="backSide">
+                  <div id="dial2"></div>
+                  <button id="repeatBtn" class="btn text-center btn-outline-primary mx-3 mt-3" type="button">Repeat</button>
+                  <button id="saveBtn" class="btn text-center btn-outline-primary mx-3 mt-3" type="button">Save</button>
+                  <hr />
+                  <textarea></textarea>
+                </div>
               </div>
             </div>
           </div>

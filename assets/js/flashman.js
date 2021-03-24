@@ -1,17 +1,64 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log(myFlashcards)
+
+    // Button actions
+
+    document.querySelector('#answerBtn').onclick = () => answer_button();
+    document.querySelector('#repeatBtn').onclick = () => repeat_button();
+    document.querySelector('#saveBtn').onclick = () => save_button();
+
+    // Display front card and hide back card
+
+    document.querySelector('#backSide').style.display = 'none';
+
     randomNum = Math.floor(Math.random() * (myFlashcards.length))
 
-
+    // Display video
     document.querySelector('#vidFrame').setAttribute('src', `${myFlashcards[randomNum].video}`);
+
+    // Create Front Card text
     for (i=0; i < myFlashcards[randomNum].deDialog.length; i++) {
         const elem = document.createElement('p');
+        elem.classList.add('pb-3');
+        const lineBreak = document.createElement('br');
+        elem.classList.add('d-inline');
         const div1 = document.querySelector('#dial1');
         const elemText = document.createTextNode(myFlashcards[randomNum].deDialog[i]); 
         elem.appendChild(elemText);
+        if (i < (myFlashcards[randomNum].deDialog.length - 1)) {
+            elem.appendChild(lineBreak);
+        }
         div1.appendChild(elem);
     }
+    // Create Back Card text
+
+    for (i=0; i < myFlashcards[randomNum].enDialog.length; i++) {
+        const elem = document.createElement('p');
+        elem.classList.add('pb-3');
+        const lineBreak = document.createElement('br');
+        elem.classList.add('d-inline');
+        const div1 = document.querySelector('#dial2');
+        const elemText = document.createTextNode(myFlashcards[randomNum].enDialog[i]); 
+        elem.appendChild(elemText);
+        if (i < (myFlashcards[randomNum].deDialog.length - 1)) {
+            elem.appendChild(lineBreak);
+        }
+        div1.appendChild(elem);
+    }
+
 })
+
+function answer_button() {
+    document.querySelector('#backSide').style.display = 'block';
+}
+
+function repeat_button() {
+    location.reload()
+}
+
+function save_button() {
+    location.reload()
+}
+
 
 const myFlashcards = [
     {
