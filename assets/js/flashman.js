@@ -113,26 +113,28 @@ const myFlashcards = [
         deDialog: [
             "Schön. Und wer ist Yara?",
             "Yara ist Nicos Tante. Er hat gesagt, sie hat hier",
-            "einen Fahrradladen. Aber er hat die Adresse nicht."
+            "einen Fahrradladen. Aber er hat die Adresse nicht.",
+            "Auch nicht so gut."
         ],
         enDialog: [
             "Nice. And who is Yara?",
             "Yara is Nico's aunt. He said that she has a bike shop here.",
-            "But he doesn't have the address."
+            "But he doesn't have the address.",
+            "Oh that's not very good, either."
         ]
     },
     {
         fcId: 5,
         video: "static\\nico05.mp4",
         deDialog: [
-            "Auch nicht so gut. Und wie alt bist du?",
+            "Und wie alt bist du?",
             "Ich bin 22 Jahre alt. Und du? Kommst du aus Deutschland?",
             "Ich bin 25 Jahre. Und ja, ich komme aus Deutschland.",
             "Und ich heiße Nina. Ich komme auch aus Deutschland",
             "und bin 23 Jahre alt. Hi!"
         ],
         enDialog: [
-            "Oh that's not very good, either. And how old are you?",
+            "And how old are you?",
             "I'm 22 years old. And you? Are you from Germany?",
             "I'm 25. And yes, I'm from Germany.",
             "And I'm Nina. I'm from Germany, too,",
